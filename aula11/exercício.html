@@ -1,0 +1,44 @@
+<script> //A proposta do exercício é transformar o ex009 em HTML</script>
+<!DOCTYPE html>      
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GOV</title>
+    <h1>Idenficação de Nacionalidade</h1>
+    País de origem <input type="text" name="txt" id="txt">
+    <input type="button" value="Verificar" onclick="clicar()">
+    <div id="res"></div>
+
+    <style>
+        input {
+            width: 100px;
+            font: normal 18pt Arial;
+        }
+        body {
+            font: normal 16pt Arial;
+            background-color:rgb(123, 153, 153);
+            color: rgb(212, 208, 208);
+        }
+        
+    </style>
+</head>
+<body>
+    <script>
+        function clicar() {
+            var t1 = window.document.querySelector('input#txt')
+            var res = window.document.querySelector('div#res')
+            var nac = t1.value 
+            res.innerHTML =  `<p>Seu país de origem é <strong>${nac}.</strong></p>`
+            if ( nac == 'Brasil' || nac == 'brasil') {
+                res.innerHTML += '<p>Você é Brasileiro.</p>'
+            } else {
+                res.innerHTML += '<p>Você é estrangeiro.</p>'
+            }
+            
+        }
+    </script>
+
+</body>
+</html>
